@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/examScheduling")
+mongoose.connect("mongodb+srv://srinaa:srinaa@cluster0.jplg1h7.mongodb.net/examScheduling?retryWrites=true&w=majority")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 

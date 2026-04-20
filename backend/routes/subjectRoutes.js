@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Subject = require("../models/Subject");
+const Exam = require("../models/Exam");
 
 // ADD SUBJECT
 router.post("/", async (req, res) => {
@@ -38,8 +39,15 @@ router.get("/", async (req, res) => {
 // DELETE SUBJECT
 router.delete("/:id", async (req, res) => {
   try {
-    await Subject.findByIdAndDelete(req.params.id);
-    res.json({ message: "Deleted successfully" });
+    const subjectId = req.params.id;
+
+    // Delete all exams related to this subject
+    await Exam.deleteMany({ subject: subjectId });
+
+    // Delete the subject
+    await Subject.findByIdAndDelete(subjectId);
+    
+    res.json({ message: "Subject and related exams deleted successfully" });
   } catch (err) {
     res.status(500).json({ message: "Error deleting subject" });
   }
