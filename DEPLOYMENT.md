@@ -4,14 +4,24 @@
 
 Your frontend has been configured to use the deployed backend at:
 - **Backend URL**: https://exam-scheduling-backend-idxr.onrender.com
+- **Frontend URL**: https://exam-scheduling-system.onrender.com
 
 ### What Changed:
 1. Created `.env` file with API URL configuration
 2. Created `src/config.js` for centralized API management
 3. Updated all 6 component files to use the new API configuration
 4. Generated optimized production build in `build/` folder
+5. Updated backend CORS to allow the specific frontend URL
 
-## Next Steps: Deploy Frontend
+## Backend CORS Configuration ✅
+
+Updated `server.js` to allow requests from your deployed frontend:
+```javascript
+app.use(cors({
+  origin: "https://exam-scheduling-system.onrender.com",
+  credentials: true
+}));
+```
 
 ### Option 1: **Deploy to Render** (Recommended - Same platform as backend)
 1. Create a new account/login at https://render.com
@@ -32,17 +42,6 @@ Your frontend has been configured to use the deployed backend at:
 3. Set build command: `npm run build`
 4. Set publish directory: `build`
 5. Deploy
-
-## CORS Configuration (If needed in backend)
-
-If you get CORS errors, update your backend `server.js`:
-```javascript
-const cors = require('cors');
-app.use(cors({
-  origin: "https://your-frontend-url.vercel.app", // Add your frontend URL
-  credentials: true
-}));
-```
 
 ---
 
