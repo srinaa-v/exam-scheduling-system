@@ -8,7 +8,10 @@ const examRoutes = require("./routes/examRoutes");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://exam-scheduling-system.onrender.com",
+  credentials: true
+}));
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://srinaa:srinaa@cluster0.jplg1h7.mongodb.net/examScheduling?retryWrites=true&w=majority")
