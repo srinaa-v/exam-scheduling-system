@@ -1,0 +1,87 @@
+/* Layout Structure */
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #5f6fad;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  background-color: #f4f6fa;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  justify-content: flex-end;   /* 🔥 Push logout to right */
+  padding: 20px 30px;
+  background: transparent;
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: auto;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Page Content */
+.page-content {
+  padding: 20px 30px;
+}
+/* Make dashboard sections equal */
+.dashboard-section .card {
+  min-height: 180px;
+}
+
+/* Better list spacing */
+.card ul {
+  margin-top: 15px;
+}
+
+.card li {
+  padding: 12px 0;
+}

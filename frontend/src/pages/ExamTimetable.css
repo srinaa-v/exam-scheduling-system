@@ -1,0 +1,50 @@
+/* ExamTimetable.css */
+.timetable-container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* ⭐ important */
+  padding-top: 80px;        /* ⭐ bring card up */
+  box-sizing: border-box;
+}
+
+
+
+.timetable-card {
+  width: 80%;
+  max-width: 900px;
+  background: white;
+  border-radius: 18px;
+  padding: 30px 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.timetable-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-wrapper th {
+  background: #223843;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+.table-wrapper td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}

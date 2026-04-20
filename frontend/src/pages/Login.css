@@ -1,0 +1,97 @@
+/* Background */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #f2f2f2 70%, #1e3c72 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wave effect */
+.login-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: url("https://svgshare.com/i/13h8.svg") no-repeat center;
+  background-size: cover;
+}
+
+/* Card */
+.login-card {
+  background: #fff;
+  padding: 40px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.logo {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.login-card h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Role Toggle */
+.role-toggle {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e5e9f2;
+}
+
+.role-toggle button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-weight: 500;
+}
+
+.role-toggle .active {
+  background: #4a6cf7;
+  color: white;
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.login-card input:focus {
+  border-color: #4a6cf7;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #4a6cf7;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #3451d1;
+}

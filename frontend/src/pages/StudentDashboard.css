@@ -1,0 +1,16 @@
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.exam-table th,
+.exam-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.exam-table th {
+  background-color: #f4f4f4;
+}

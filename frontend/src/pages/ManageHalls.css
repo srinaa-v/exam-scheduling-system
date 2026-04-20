@@ -1,0 +1,102 @@
+.hall-container {
+  
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hall-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.hall-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1d2671;
+}
+
+.hall-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.hall-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.hall-form input:focus {
+  outline: none;
+  border-color: #1d2671;
+  box-shadow: 0 0 6px rgba(29, 38, 113, 0.5);
+}
+
+.add-btn {
+  padding: 10px 15px;
+  background: #1d2671;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #c33764;
+  transform: translateY(-2px);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #1d2671;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f3f3f3;
+}
+
+.delete-btn {
+  padding: 6px 10px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background: #b52b27;
+}
+
+.no-data {
+  padding: 20px;
+  color: gray;
+}
